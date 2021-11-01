@@ -40,7 +40,6 @@ const Navbar = () => {
     burger.classList.toggle("toggle");
   }
 
-  const arrayBars = document.querySelectorAll('.array-bar')
 
   return (
     <div className='navbar'>
@@ -61,20 +60,20 @@ const Navbar = () => {
         <button onClick={() => dispatch(setArrayNums())} disabled={sorting} className='new-array'>Generate New Array</button>  
       </div>
       <div className='algo-buttons'>
-        <button onClick={() => {dispatch(mergeSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'merge' ? 'active' : ''}>Merge Sort</button>
-        <button onClick={() => {dispatch(quickSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'quick' ? 'active' : ''}>Quick Sort</button>
-        <button onClick={() => {dispatch(selectionSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'selection' ? 'active' : ''}>Selection Sort</button>
-        <button onClick={() => {dispatch(bubbleSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'bubble' ? 'active' : ''}>Bubble Sort</button>
-        <button onClick={() => {dispatch(insertionSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'insertion' ? 'active' : ''}>Insertion Sort</button>
+        <button onClick={() => {dispatch(mergeSortArray())}} disabled={sorting} className={sortType === 'merge' ? 'active' : ''}>Merge Sort</button>
+        <button onClick={() => {dispatch(quickSortArray())}} disabled={sorting} className={sortType === 'quick' ? 'active' : ''}>Quick Sort</button>
+        <button onClick={() => {dispatch(selectionSortArray())}} disabled={sorting} className={sortType === 'selection' ? 'active' : ''}>Selection Sort</button>
+        <button onClick={() => {dispatch(bubbleSortArray())}} disabled={sorting} className={sortType === 'bubble' ? 'active' : ''}>Bubble Sort</button>
+        <button onClick={() => {dispatch(insertionSortArray())}} disabled={sorting} className={sortType === 'insertion' ? 'active' : ''}>Insertion Sort</button>
       </div>
 
       <div className="dropdown">
         <button onClick={() => dispatch(setArrayNums())} disabled={sorting} className='new-array'>Generate New Array</button>  
-        <button onClick={() => {dispatch(mergeSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'merge' ? 'active' : ''}>Merge Sort</button>
-        <button onClick={() => {dispatch(quickSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'quick' ? 'active' : ''}>Quick Sort</button>
-        <button onClick={() => {dispatch(selectionSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'selection' ? 'active' : ''}>Selection Sort</button>
-        <button onClick={() => {dispatch(bubbleSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'bubble' ? 'active' : ''}>Bubble Sort</button>
-        <button onClick={() => {dispatch(insertionSortArray())}} disabled={sorting || (!sorting && arrayBars[arrayBars.length - 1].style.background === 'lightgreen')} className={sortType === 'insertion' ? 'active' : ''}>Insertion Sort</button>
+        <button onClick={() => {dispatch(mergeSortArray())}} disabled={sorting} className={sortType === 'merge' ? 'active' : ''}>Merge Sort</button>
+        <button onClick={() => {dispatch(quickSortArray())}} disabled={sorting} className={sortType === 'quick' ? 'active' : ''}>Quick Sort</button>
+        <button onClick={() => {dispatch(selectionSortArray())}} disabled={sorting} className={sortType === 'selection' ? 'active' : ''}>Selection Sort</button>
+        <button onClick={() => {dispatch(bubbleSortArray())}} disabled={sorting} className={sortType === 'bubble' ? 'active' : ''}>Bubble Sort</button>
+        <button onClick={() => {dispatch(insertionSortArray())}} disabled={sorting} className={sortType === 'insertion' ? 'active' : ''}>Insertion Sort</button>
       </div>
 
       <div className="hamburger">
