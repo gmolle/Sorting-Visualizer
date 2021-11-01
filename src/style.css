@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  max-height: 100vh;
+  height: calc(100vh - 100px);
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
+}
