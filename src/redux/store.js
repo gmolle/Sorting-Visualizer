@@ -4,12 +4,13 @@ import thunk from "redux-thunk";
 import { arrayReducer } from "./reducers/array.reducer";
 
 const rootReducer = combineReducers({
-  array: arrayReducer
-})
+  array: arrayReducer,
+});
 
 const store = createStore(
-  rootReducer, {},
+  rootReducer,
+  {},
   composeWithDevTools(applyMiddleware(thunk))
-)
+);
 
-export default store
+export default store;

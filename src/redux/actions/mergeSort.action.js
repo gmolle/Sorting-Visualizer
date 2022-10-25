@@ -13,13 +13,11 @@ export const mergeSortArray = () => async (dispatch, getState) => {
   
       for(let i = 0; i < n1; i++){
         await waitForAnimation(getState().array.animationSpeed)
-          // color
           ele[low + i].style.background = 'orange';
           left[i] = ele[low + i].style.height;
       }
       for(let i = 0; i < n2; i++){
         await waitForAnimation(getState().array.animationSpeed)
-          // color
           ele[mid + 1 + i].style.background = getState().array.secondaryColor;
           right[i] = ele[mid + 1 + i].style.height;
       }
@@ -28,37 +26,32 @@ export const mergeSortArray = () => async (dispatch, getState) => {
       while(i < n1 && j < n2){
         await waitForAnimation(getState().array.animationSpeed)
           
-          // To add color for which two r being compared for merging
-          
-          if(parseInt(left[i]) <= parseInt(right[j])){
-              // color
-              if((n1 + n2) === ele.length){
-                  ele[k].style.background = 'lightgreen';
-              }
-              else{
-                  ele[k].style.background = 'lightpink';
-              }
-              
-              ele[k].style.height = left[i];
-              i++;
-              k++;
+        if(parseInt(left[i]) <= parseInt(right[j])){
+          if((n1 + n2) === ele.length){
+              ele[k].style.background = 'lightgreen';
           }
           else{
-              // color
-              if((n1 + n2) === ele.length){
-                  ele[k].style.background = 'lightgreen';
-              }
-              else{
-                  ele[k].style.background = 'lightpink';
-              } 
-              ele[k].style.height = right[j];
-              j++;
-              k++;
+              ele[k].style.background = 'lightpink';
           }
+          
+          ele[k].style.height = left[i];
+          i++;
+          k++;
+        }
+        else{
+          if((n1 + n2) === ele.length){
+            ele[k].style.background = 'lightgreen';
+          }
+          else{
+            ele[k].style.background = 'lightpink';
+          } 
+          ele[k].style.height = right[j];
+          j++;
+          k++;
+        }
       }
       while(i < n1){
         await waitForAnimation(getState().array.animationSpeed)
-          // color
           if((n1 + n2) === ele.length){
               ele[k].style.background = 'lightgreen';
           }
@@ -71,12 +64,10 @@ export const mergeSortArray = () => async (dispatch, getState) => {
       }
       while(j < n2){
         await waitForAnimation(getState().array.animationSpeed)
-          // color
           if((n1 + n2) === ele.length){
-              ele[k].style.background = 'lightgreen';
-          }
-          else{
-              ele[k].style.background = 'lightpink';
+            ele[k].style.background = 'lightgreen';
+          }else{
+            ele[k].style.background = 'lightpink';
           }
           ele[k].style.height = right[j];
           j++;
@@ -85,7 +76,7 @@ export const mergeSortArray = () => async (dispatch, getState) => {
     }
 
 
-     const mergeSort = async(ele, l, r) =>{
+    const mergeSort = async(ele, l, r) =>{
       if(l >= r) return;
       const m = l + Math.floor((r - l) / 2);
       await mergeSort(ele, l, m);
