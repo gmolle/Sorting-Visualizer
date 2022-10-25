@@ -6,13 +6,10 @@ import {
   setArraySize,
   setBarWidthAndMargin,
 } from "../../redux/actions/array.action";
-import { bubbleSortArray } from "../../redux/actions/bubbleSort.action";
-import { insertionSortArray } from "../../redux/actions/insertionSort.action";
-import { mergeSortArray } from "../../redux/actions/mergeSort.action";
-import { quickSortArray } from "../../redux/actions/quickSort.action";
-import { selectionSortArray } from "../../redux/actions/selectionSort.action";
+import Dropdown from "./Dropdown";
 
 import "./navbar.css";
+import SortTypeButton from "./SortTypeButton";
 
 const Navbar = () => {
   const { arraySize, animationSpeed, sorting, sortType } = useSelector(
@@ -80,6 +77,7 @@ const Navbar = () => {
           <div>{animationSpeed}ms</div>
         </div>
       </div>
+
       <div className="misc-controls">
         <button
           onClick={() => dispatch(setArrayNums())}
@@ -89,108 +87,16 @@ const Navbar = () => {
           Generate New Array
         </button>
       </div>
+
       <div className="algo-buttons">
-        <button
-          onClick={() => {
-            dispatch(mergeSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "merge" ? "active" : ""}
-        >
-          Merge Sort
-        </button>
-        <button
-          onClick={() => {
-            dispatch(quickSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "quick" ? "active" : ""}
-        >
-          Quick Sort
-        </button>
-        <button
-          onClick={() => {
-            dispatch(selectionSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "selection" ? "active" : ""}
-        >
-          Selection Sort
-        </button>
-        <button
-          onClick={() => {
-            dispatch(bubbleSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "bubble" ? "active" : ""}
-        >
-          Bubble Sort
-        </button>
-        <button
-          onClick={() => {
-            dispatch(insertionSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "insertion" ? "active" : ""}
-        >
-          Insertion Sort
-        </button>
+        <SortTypeButton sort="merge" />
+        <SortTypeButton sort="quick" />
+        <SortTypeButton sort="selection" />
+        <SortTypeButton sort="bubble" />
+        <SortTypeButton sort="insertion" />
       </div>
 
-      <div className="dropdown">
-        <button
-          onClick={() => dispatch(setArrayNums())}
-          disabled={sorting}
-          className="new-array"
-        >
-          Generate New Array
-        </button>
-        <button
-          onClick={() => {
-            dispatch(mergeSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "merge" ? "active" : ""}
-        >
-          Merge Sort
-        </button>
-        <button
-          onClick={() => {
-            dispatch(quickSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "quick" ? "active" : ""}
-        >
-          Quick Sort
-        </button>
-        <button
-          onClick={() => {
-            dispatch(selectionSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "selection" ? "active" : ""}
-        >
-          Selection Sort
-        </button>
-        <button
-          onClick={() => {
-            dispatch(bubbleSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "bubble" ? "active" : ""}
-        >
-          Bubble Sort
-        </button>
-        <button
-          onClick={() => {
-            dispatch(insertionSortArray());
-          }}
-          disabled={sorting}
-          className={sortType === "insertion" ? "active" : ""}
-        >
-          Insertion Sort
-        </button>
-      </div>
+      <Dropdown />
 
       <div className="hamburger">
         <div className="line1" onClick={showNav}></div>
