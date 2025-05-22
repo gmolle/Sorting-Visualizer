@@ -12,7 +12,7 @@ import "./navbar.css";
 import SortTypeButton from "./SortTypeButton";
 
 const Navbar = () => {
-  const { arraySize, animationSpeed, sorting, sortType } = useSelector(
+  const { arraySize, animationSpeed, sorting } = useSelector(
     (state) => state.array
   );
   const dispatch = useDispatch();
