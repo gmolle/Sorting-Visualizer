@@ -2,9 +2,9 @@
 
 An interactive React-based web application that visually demonstrates how various sorting algorithms operate in real-time. Designed to aid in understanding the inner workings of sorting techniques through dynamic animations.
 
-View the deployed project [here:](https://gmolle-sorting-visualizer.web.app/)
+View the deployed project [here](https://gmolle-sorting-visualizer.web.app/)
 
-![Sorting Visualizer Demo](public/sorting-visualizer.gif)
+![Sorting Visualizer Demo](public/sorting.gif)
 
 ---
 
@@ -57,28 +57,28 @@ cd Sorting-Visualizer
 npm install
 
 # Start the development server
-npm run dev
+npm start
 ```
 
 ## 📷 Screenshots
 
 <p>
-  <img src="public/pathfinding-visualizer-image1.png" alt="Pathfinding Visualizer Screenshot 1" width="600"/>
+  <img src="public/1.png" alt="Sorting Visualizer Screenshot 1" width="600"/>
   <br/>
   <em>Default view of visualizer</em>
 </p>
 <p>
-  <img src="public/pathfinding-visualizer-image2.png" alt="Pathfinding Visualizer Screenshot 1" width="600"/>
+  <img src="public/2.png" alt="Sorting Visualizer Screenshot 1" width="600"/>
   <br/>
-  <em>Recursive division maze created</em>
+  <em>Merge Sort in progress</em>
 </p>
 <p>
-  <img src="public/pathfinding-visualizer-image3.png" alt="Pathfinding Visualizer Screenshot 1" width="600"/>
+  <img src="public/3.png" alt="Sorting Visualizer Screenshot 1" width="600"/>
   <br/>
-  <em>A* algorithm in progress</em>
+  <em>Merge Sort continued</em>
 </p>
 <p >
-  <img src="public/pathfinding-visualizer-image4.png" alt="Pathfinding Visualizer Screenshot 1" width="600"/>
+  <img src="public/4.png" alt="Sorting Visualizer Screenshot 1" width="600"/>
   <br/>
-  <em>A* algorithm solved with path shown</em>
+  <em>Sorting complete</em>
 </p>
